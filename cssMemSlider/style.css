@@ -13,7 +13,6 @@
 
 .slider{
     max-width: 800px;
-    width: 500%;
     height: 600px;
     overflow: hidden;
     margin: 0 auto;
@@ -64,11 +63,8 @@
     position: absolute;
     bottom: 90px;
     right: 20px;
-    width: 100px;
-    height: 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
     z-index: 10;
 }
 
@@ -84,8 +80,17 @@ input[name='mem']{
     cursor: pointer
 }
 
-.nav .label:hover{
+.nav .label__wrapp:hover .label{
     background-color: white;
+}
+
+.label__wrapp{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #mem_1:checked ~ .slider>.nav .label_1{
@@ -109,23 +114,23 @@ input[name='mem']{
     border: 1px solid cornflowerblue;
 }
 
-#mem_1:checked ~.slider>.nav>.label_1:hover{
+#mem_1:checked ~.slider>.nav .label__wrapp:hover .label_1{
 background-color: black;
     border: 1px solid white;
 }
-#mem_2:checked ~.slider>.nav>.label_2:hover{
+#mem_2:checked ~.slider>.nav .label__wrapp:hover .label_2{
     background-color: black;
     border: 1px solid white;
 }
-#mem_3:checked ~.slider>.nav>.label_3:hover{
+#mem_3:checked ~.slider>.nav .label__wrapp:hover .label_3{
     background-color: black;
     border: 1px solid white;
 }
-#mem_4:checked ~.slider>.nav>.label_4:hover{
+#mem_4:checked ~.slider .label__wrapp:hover .label_4{
     background-color: black;
     border: 1px solid white;
 }
-#mem_5:checked ~.slider>.nav>.label_5:hover{
+#mem_5:checked ~.slider>.nav .label__wrapp:hover .label_5{
     background-color: black;
     border: 1px solid white;
 }
@@ -146,3 +151,13 @@ background-color: black;
     transform: translateX(-400%);
 }
 
+@media (max-width: 767px){
+    .slide__description{
+        margin-top: 60px;
+    }
+    .nav{
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+}
