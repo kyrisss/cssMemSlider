@@ -152,12 +152,16 @@ background-color: black;
 }
 
 @media (max-width: 767px){
+    .slider{
+        height: 320px;
+    }
     .slide__description{
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .nav{
         right: 50%;
         transform: translateX(50%);
+        bottom: 15%;
     }
 
 }
